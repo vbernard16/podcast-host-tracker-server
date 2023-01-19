@@ -1,0 +1,25 @@
+{
+  "name": "podcast-host-tracker-server",
+  "version": "1.0.0",
+  "description": "express-api-homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbernard16/podcast-host-tracker-server.git"
+  },
+  "author": "Vaughn Bernard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbernard16/podcast-host-tracker-server/issues"
+  },
+  "homepage": "https://github.com/vbernard16/podcast-host-tracker-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4"
+  }
+}
