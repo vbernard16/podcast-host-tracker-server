@@ -31,4 +31,22 @@ router.get('/podcaster/:id', (req, res, next) => {
         .catch(next)
 })
 
+router.patch('./podcaster/:id', (req, res, next) => {
+    Podcaster.findById(req.params.id)
+        .then((podcaster) => {
+            return podcaster.updateOne(req.body.character)
+        })
+        .then(() => res.sendStatus(204))
+        .catch(next)
+})
+
+router.delete('./podcaster/:id', (req, res, next) => {
+    Podcaster.findById(req.params.id)
+        .then((podcaster) => {
+            return podcaster.deleteOne()
+        })
+        .then(() => res.sendStatus(204))
+        .catch(console.error)
+})
+
 module.exports = router

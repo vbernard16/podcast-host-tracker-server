@@ -15,7 +15,7 @@ const podcasterRoutes = require('./routes/podcaster-routes.js')
 
 const app = express()
 
-app.use(cors({ origin: `http://127.0.0.1:5502` }))
+app.use(cors({ origin: `http://127.0.0.1:5501` }))
 
 app.use(express.json())
 
