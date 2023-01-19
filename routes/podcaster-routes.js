@@ -15,7 +15,6 @@ router.get('/podcaster', (req, res, next) => {
 })
 
 
-
 router.post('/podcaster', (req, res, next) => {
     Podcaster.create(req.body.podcaster)
         .then((podcaster) => {
