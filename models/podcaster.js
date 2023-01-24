@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const characterSchema = require('../models/characters')
 
 const podcasterSchema = new mongoose.Schema({
     name: {
@@ -7,8 +8,9 @@ const podcasterSchema = new mongoose.Schema({
     },
     funnyLevel: {
         type: Number,
-        required: true
-    }
+        required: false
+    },
+    characters: [characterSchema]
 })
 
 

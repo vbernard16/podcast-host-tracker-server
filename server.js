@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 const express = require('express')
 const db = require('./config/db')
 const cors = require('cors')
-
+const userRoutes = require('./routes/user-routes')
+const characterRoutes = require('./routes/character-routes')
 
 mongoose.set('strictQuery', true)
 
@@ -22,7 +23,9 @@ app.use(express.json())
 
 app.use(podcasterRoutes)
 
+app.use(characterRoutes)
 
+app.use(userRoutes)
 
 
 app.listen(8000, () => {

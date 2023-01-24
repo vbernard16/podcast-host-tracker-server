@@ -6,6 +6,7 @@ const router = express.Router()
 router.get('/podcaster', (req, res, next) => {
     Podcaster.find()
         .then((podcaster) => {
+            console.log(podcaster)
             return podcaster.map((podcaster) => podcaster)
         })
         .then((podcaster) => {
